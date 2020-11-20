@@ -1,4 +1,6 @@
 import java.util.Stack;
+import java.util.Queue;
+import java.util.LinkedList;
 
 /**
  * @author Scott Hansford
@@ -6,13 +8,41 @@ import java.util.Stack;
  */
 class Copystack {
 
+    /**
+     * Accepts a stack of integers as a parameter and returns a copy of the original
+     * stack, while preserving the original stack
+     * 
+     * @param s
+     * @return Stack
+     */
     public static Stack<Integer> copyStack(Stack<Integer> s) {
         Stack<Integer> copy = new Stack<Integer>();
-        copy.addAll(s);
+        Queue<Integer> q = new LinkedList<>();
+        q.addAll(s);
+        copy.addAll(q);
         return copy;
     }
 
     /**
+     * Accepts a stack of integers as a parameter and replace the stack contents
+     * with itself plus a mirrored version of itself
+     * 
+     * @param s
+     * @return
+     */
+    public static Stack<Integer> mirror(Stack<Integer> s) {
+        Stack<Integer> copy = new Stack<Integer>();
+        Stack<Integer> copy2 = new Stack<Integer>();
+        copy.addAll(s);
+        copy2.addAll(copy);
+        while (!s.isEmpty()) {
+            copy2.add(s.pop());
+        }
+        return copy2;
+    }
+
+    /**
+     * Test our methods
      * 
      * @param args
      */
@@ -29,6 +59,8 @@ class Copystack {
         System.out.println("The copy stack = " + copyStack(og));
 
         System.out.println("The original stack = " + og);
+
+        System.out.println("The mirror Stack is: " + mirror(og));
 
         /**
          * Sample runs:
