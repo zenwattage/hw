@@ -58,7 +58,7 @@ class Copystack {
 
         System.out.println("The copy stack = " + copyStack(og));
 
-        System.out.println("The original stack = " + og);
+        System.out.println("Original stack = " + og);
 
         System.out.println("The mirror Stack is: " + mirror(og));
 
