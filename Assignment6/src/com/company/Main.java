@@ -1,6 +1,5 @@
 package com.company;
 
-import java.lang.reflect.Array;
 
 /**
  * @author Scott Hansford
@@ -29,12 +28,16 @@ public class Main {
         Client client = new Client(a);
         System.out.println(client);
         System.out.println(a);
-        System.out.println(a.lastIndexOf(2));
-        System.out.println(a.lastIndexOf(3));
-        System.out.println("count of 3: " + a.count(3));
-        System.out.println("count of 2: " + a.count(2));
+        System.out.println("list.lastIndexOf(2) is " + a.lastIndexOf(2));
+        System.out.println("list.count(2) is " + a.count(2));
+//        System.out.println(a.lastIndexOf(2));
+//        System.out.println(a.lastIndexOf(3));
+//        System.out.println("count of 3: " + a.count(3));
+//        System.out.println("count of 2: " + a.count(2));
         a.removeLast();
-        System.out.println("last: " + a.toString());
+        System.out.println("After a.removeLast()");
+        System.out.println(a);
+        //System.out.println("A to String: " + a.toString());
 
     }
 }

@@ -226,14 +226,34 @@ public class ArrayIntList{
     //      from the array
     public void removeLast() throws NoSuchElementException{
 
+        int count = 0;
         if(elementData.length == 0){
             throw new NoSuchElementException();
         }
 
-        //prints the last value of the list
-        
-        //remove last value of list
 
+        //prints the last value of the list
+        for(int each : elementData){
+            if(each != 0){
+                count++;
+            }
+        }
+
+        int[] holder = new int[count - 1];
+
+
+        for(int i = 0 ; i < holder.length; i ++){
+
+            holder[holder.length -1] = 0;
+            //System.out.println(elementData[i]);
+            if(elementData[i] != 0){
+
+                holder[i] = elementData[i];
+            }
+
+        }
+        System.out.println(holder[holder.length - 1]);
+        remove(holder.length);
     }
 
 
