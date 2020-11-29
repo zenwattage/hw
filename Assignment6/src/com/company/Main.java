@@ -1,9 +1,12 @@
 package com.company;
 
-
 /**
  * @author Scott Hansford
  * @version AD300 : TA6
+ * @date 11/28/2020
+ *
+ *
+ *
  */
 public class Main {
 
@@ -25,12 +28,16 @@ public class Main {
         list.add(3);
         list.add(3);
 
+        System.out.println("Sample runs:");
         System.out.println("list = " + list);
         System.out.println("list.lastIndexOf(2) is " + list.lastIndexOf(2));
         System.out.println("list.count(2) is " + list.count(2));
+        System.out.print("list.removeLast() is " );
         list.removeLast();
-        System.out.println("After a.removeLast()");
-        System.out.println(list);
+        System.out.println("After list.removeLast()");
+        System.out.println("list = " + list);
+        System.out.println("After list.doubleList()");
+        //System.out.println("list = " + list.doubleList());
 
     }
 }

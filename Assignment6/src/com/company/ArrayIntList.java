@@ -4,8 +4,7 @@ package com.company;// Class ArrayIntList can be used to store a list of integer
 import java.util.*;
 
 /**
- * @author Scott Hansford
- * @version
+ * Implements various methods to manipulate an array of integers
  */
 public class ArrayIntList{
 
@@ -232,7 +231,6 @@ public class ArrayIntList{
         }
 
 
-        //prints the last value of the list
         for(int each : elementData){
             if(each != 0){
                 count++;
@@ -254,6 +252,12 @@ public class ArrayIntList{
         }
         System.out.println(holder[holder.length - 1]);
         remove(holder.length);
+    }
+
+    //post: double the size of the list by appending a copy to the end of the original list
+    public void doubleList(){
+
+       //copy list into new list twice
     }
 
 
