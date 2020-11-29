@@ -183,14 +183,58 @@ public class ArrayIntList{
      * For example, if the list stores [1, 18, 2, 7, 18, 39, 18, 40],
      * then the last index of 18 is 6 and the last index of 3 is -1.
      */
+    //post: returns the highest index of the searched for value
     public int lastIndexOf(int value){
-        //loop over each index
-        //get index of value
-        // if (hasnext && checkindex > previndex)
-        //highest index matching value
+        //start at back of arr
+        for(int i = elementData.length - 1; i > 0; i--){
+                if(elementData[i] == value){
+                    return i;
+                }
+        }
         return -1;
     }
 
+    /**
+     * method count that accepts an element value as a parameter and
+     * returns the number of occurrences of that value in the list.
+     * For example, if the list stores [2, -3, 2, 0, 5, 2, 2, 6].
+     * A call of list.count(2) should return 4 because there are four occurrences
+     * of that value in the list.
+     */
+    //post: returns count of searched for value
+    public int count(int value){
+        int count = 0;
+        for(int each : elementData){
+            if(each == value){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    /**
+     * method removeLast that removes and returns the last value from a list of integer.
+     * For example, if a variable called list stores [8, 17, 42, 3, 8], a call of list.removeLast();
+     * should remove 8 and change the list’s state to [8, 17, 42, 3].
+     * The next call would return 3 and remove 3 from the list, and so on.
+     * If the list is empty, throw a NotSuchElementException.
+     * @return
+     */
+
+    //pre: size() <= 0 (throws NoSuchElementException)
+    //post: returns last value then removes last value
+    //      from the array
+    public void removeLast() throws NoSuchElementException{
+
+        if(elementData.length == 0){
+            throw new NoSuchElementException();
+        }
+
+        //prints the last value of the list
+        
+        //remove last value of list
+
+    }
 
 
 

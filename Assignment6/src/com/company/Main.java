@@ -26,9 +26,15 @@ public class Main {
         a.add(3);
         a.add(3);
 
-        System.out.println(a.toString());
-
-
+        Client client = new Client(a);
+        System.out.println(client);
+        System.out.println(a);
+        System.out.println(a.lastIndexOf(2));
+        System.out.println(a.lastIndexOf(3));
+        System.out.println("count of 3: " + a.count(3));
+        System.out.println("count of 2: " + a.count(2));
+        a.removeLast();
+        System.out.println("last: " + a.toString());
 
     }
 }

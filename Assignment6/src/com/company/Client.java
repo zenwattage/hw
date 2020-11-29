@@ -2,12 +2,12 @@ package com.company;
 
 public class Client {
     private ArrayIntList list;
-    private int[] intlist;
     private ArrayIntListIterator i;
 
-    public Client(){
+    public Client(ArrayIntList list){
         this.list = list;
         this.i = list.iterator();
+        System.out.println(i.next());
     }
 
 
