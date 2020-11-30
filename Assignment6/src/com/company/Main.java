@@ -3,16 +3,13 @@ package com.company;
 /**
  * @author Scott Hansford
  * @version AD300 : TA6
- * @date 11/28/2020
- *
- *
- *
+ * @version 11/28/2020
+ * @version Copy and mirror Integers
  */
 public class Main {
 
-
     /**
-     *
+     * Test our ArrayIntList class
      * @param args
      */
     public static void main(String[] args) {
@@ -37,6 +34,7 @@ public class Main {
         System.out.println("After list.removeLast()");
         System.out.println("list = " + list);
         System.out.println("After list.doubleList()");
+        list.doubleList();
         //System.out.println("list = " + list.doubleList());
 
     }

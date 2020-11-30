@@ -140,6 +140,7 @@ public class ArrayIntList{
         size = 0;
     }
 
+
     // pre: size() + other.size() <= capacity (throws IllegalStateException
     //      if not)
     // post: appends all values in the given list to the end of this list
@@ -253,11 +254,18 @@ public class ArrayIntList{
         System.out.println(holder[holder.length - 1]);
         remove(holder.length);
     }
-
+    //pre: list.size > 0
     //post: double the size of the list by appending a copy to the end of the original list
     public void doubleList(){
+        //copy element data
+        //forwards and backwards
+        int[] copy = new int[size * 2]; //double the size of the first list
+        int i = 0;
+        for(int each : elementData){
+        }
+        System.out.println(copy);
 
-       //copy list into new list twice
+
     }
 
 
