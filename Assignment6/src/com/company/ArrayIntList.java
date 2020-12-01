@@ -254,16 +254,34 @@ public class ArrayIntList{
         System.out.println(holder[holder.length - 1]);
         remove(holder.length);
     }
+
+
+    /**
+     * method doubleList that doubles the size of a list by appending a copy of
+     * the original sequence to the end of the list.
+     * For example, if the list stores [1, 8, 2, 7],
+     * your method should change it to store [1, 8, 2, 7, 1, 8, 2, 7].
+     */
     //pre: list.size > 0
     //post: double the size of the list by appending a copy to the end of the original list
     public void doubleList(){
-        //copy element data
-        //forwards and backwards
-        int[] copy = new int[size * 2]; //double the size of the first list
-        int i = 0;
-        for(int each : elementData){
+        //copy the array twice
+        int[] copy = new int[size];
+        int[] copy2 = new int[size];
+
+        for(int i = 0; i < size; i++){
+            copy[i] = elementData[i];
+            copy2[i] = elementData[i];
         }
-        System.out.println(copy);
+        //new array to fit doubled array
+        int[] mirror = new int[copy.length + copy2.length];
+
+        //copy the first 2 arrays into the mirror
+        System.arraycopy(copy, 0, mirror, 0, copy.length);
+        System.arraycopy(copy2, 0, mirror, copy.length, copy2.length);
+
+        System.out.println("list = " + Arrays.toString(mirror));
+
 
 
     }
