@@ -1,8 +1,5 @@
 package com.company;// Class ArrayIntList can be used to store a list of integers.
-
-
 import java.util.*;
-
 /**
  * Implements various methods to manipulate an array of integers
  */

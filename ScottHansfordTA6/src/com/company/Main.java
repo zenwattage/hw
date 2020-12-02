@@ -13,9 +13,7 @@ public class Main {
      * @param args
      */
     public static void main(String[] args) {
-	// write your code here
-    // [1, 2, 3, 4, 2, 3, 3]
-        //int[] arr =  {1, 2, 3, 4, 2, 3, 3};
+
         ArrayIntList list = new ArrayIntList();
         list.add(1);
         list.add(2);
@@ -35,7 +33,8 @@ public class Main {
         System.out.println("list = " + list);
         System.out.println("After list.doubleList()");
         list.doubleList();
-        //System.out.println("list = " + list.doubleList());
+
+
 
     }
 }
