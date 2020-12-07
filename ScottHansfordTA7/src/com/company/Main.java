@@ -31,6 +31,7 @@ public class Main {
         System.out.println("After list.removeAll(18)");
         System.out.print("list = "); list.removeAll(18);
         System.out.println(list.toString());
+        list.doubleList();
         System.out.println("After list.doubleList()");
         System.out.println("list = " + list.toString());
 

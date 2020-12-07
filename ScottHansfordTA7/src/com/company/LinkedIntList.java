@@ -164,6 +164,25 @@ public class LinkedIntList {
     //pre : size > 0;
     //post: size * 2;
     public void doubleList(){
+        ListNode current = front;
+        int count = 0;
+
+        while(current.next != null){
+            current = current.next;
+            count++;
+        }
+
+
+        ListNode temp = front;
+
+        while(temp != null && count >= 0){
+            current.next = new ListNode(temp.data);
+            current = current.next;
+            temp = temp.next;
+            count--;
+        }
+
+
 
     }
 
