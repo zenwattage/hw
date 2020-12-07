@@ -1,0 +1,44 @@
+Assignment 7 (10points) Due Date: submit zip file on Canvas by 11:59pm on Tuesday,
+12/8/2020
+(Please follow the instructions on the file “Assignment requirements” to name your project, zip
+the entire project and upload the zip file on canvas)
+
+Construct the Client class using the array [1, 18, 2, 7, 18, 39, 20] in the main method of
+your program to test the LinkedIntList class’s methods.
+(You will need to have your ListNode class included as well)
+
+Construct the LinkedIntList class with the following additional methods:
+Write a method called size that accepts no argument and returns the current number of
+elements in the list.
+
+Write a method called indexOf that accepts an integers as a parameter and returns the
+index in the list of the first occurrence of that value, or -1 if the value is not found in the
+list. For example, if the list stores [1, 18, 2, 7, 18, 39, 18, 40], then the first index of 18 is 1
+and the first index of 3 is -1.
+
+Write another method deleteBack that deletes the last value (the value at the back of the
+list) and returns the delete value. If the list is empty, throw a NotSuchElementException .
+Write a method called removeAll that removes all occurrences of a particular value. For
+example, if the list stores [1, 18, 2, 7, 18, 39, 18, 40], the call of list.removeAll(18); would
+change the list to store [1, 2, 7, 39, 40]
+
+Write another method doubleList that doubles the size of a list by appending a copy of
+the original sequence to the end of the list. For example, if the list stores [1, 8, 2, 7], your
+method should change it to store [1, 8, 2, 7, 1, 8, 2, 7].
+
+Please include the Precondition and Postcondition for each method in the LinkedIntList
+class.
+
+Please produce the result as the sample run below.
+
+Sample runs:
+list = [1, 18, 2, 7, 18, 39, 20]
+list.size() is 7
+list.indexOf(2) is 2
+list.deleteBack() is 20
+After list.deleteBack()
+list = [1, 18, 2, 7, 18, 39]
+After list.removeAll(18)
+list = [1, 2, 7, 39]
+After list.doubleList()
+list = [1, 2, 7, 39, 1, 2, 7, 39]
