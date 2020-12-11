@@ -111,7 +111,7 @@ public class LinkedIntList {
      * the call of list.removeAll(18); would change the list to store [1, 2, 7, 39, 40]
      * @param value
      */
-    // post :
+    // post : all matching values removed
         public ListNode removeAll( int value) {
             ListNode helper = new ListNode(0);
             helper.next = front;
@@ -131,7 +131,7 @@ public class LinkedIntList {
     /**
      * remove the last integer of the list
      */
-    // pre:
+    // post: last element removed
     public void deleteBack() {
         ListNode current = front;
         ListNode prev = front;

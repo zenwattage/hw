@@ -1,13 +1,31 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Client {
     public static void main(String[] args) {
         int[] arr = {1, 18, 2, 7, 18, 39, 20};
+
         LinkedIntList list = new LinkedIntList();
-        list.add(arr[0]);
-        list.add(arr[1]);
-        list.add(arr[2]);
+        for (int each : arr
+        ) {
+            list.add(each);
+        }
+
+        System.out.println("list = " + Arrays.toString(arr));
+        System.out.println("list.size() is " + list.size());
+        System.out.println("list.index(2) is " + list.indexOf(2));
+        //System.out.println("last in list: " + list.get(list.size() - 1));
+        System.out.print("list.deleteBack() is ");
+        list.deleteBack();
+        System.out.println("After list.deleteBack()");
+        System.out.println("list = " + list.toString() );
+        System.out.println("After list.removeAll(18)");
+        System.out.print("list = "); list.removeAll(18);
         System.out.println(list.toString());
+        list.doubleList();
+        System.out.println("After list.doubleList()");
+        System.out.println("list = " + list.toString());
         /**
          * Sample runs:
          * list = [1, 18, 2, 7, 18, 39, 20]
