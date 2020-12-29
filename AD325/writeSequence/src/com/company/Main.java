@@ -1,11 +1,24 @@
 package com.company;
 
 public class Main {
-    public void writeSequence(int n ){
-        //print count, 
+    public static void writeSequence(int n ){
+
+        if (n < 1) {
+            throw new IllegalArgumentException();
+        } else if (n == 1) {
+            System.out.print("1 ");
+        } else {
+
+            System.out.print((n + 1) / 2 + " ");
+            if (n != 2) {
+                writeSequence(n - 2);
+            }
+            System.out.print((n + 1) / 2 + " ");
+        }
     }
     public static void main(String[] args) {
 	// write your code here
+        writeSequence(5);
     }
 }
 
